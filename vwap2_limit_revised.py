@@ -408,7 +408,7 @@ def algo_loop(trading_day, order_side, original_order_quantity, vwap_coefficient
                             live_order_price = ask_price
                             live_order_quantity = calc_order_quantity(quantity_behind, round_lot, quantity_remaining)
                             live_order = True
-                else:
+                else: # last index
                     if quantity_remaining > 0:
                         total_agg_count += 1
                         new_trade_price = bid_price
